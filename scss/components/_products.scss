@@ -1,0 +1,60 @@
+.products {
+  @include respond-to(md) {
+    display: grid;
+    grid-column-gap: 16px;
+    grid-row-gap: 16px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+  }
+
+  &__shampoo {
+    padding: 250px 0;
+    background: #fff;
+    margin: 20px 0;
+
+    @include respond-to(md) {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 50%;
+      min-height: 100vh;
+    }
+
+    .text-block {
+      text-align: center;
+      font-family: 'Lato';
+      font-weight: 100;
+      font-size: 35px;
+      color: #333;
+      text-transform: uppercase;
+    }
+  }
+
+  &__creme {
+    background: #e6e6e6;
+    padding: 250px 0;
+
+    @include respond-to(md) {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 50%;
+      // height: 100vh;
+    }
+
+    .text-block {
+      text-align: center;
+      font-family: 'Lato';
+      font-weight: 100;
+      font-size: 35px;
+      color: #333;
+      text-transform: uppercase;
+    }
+  }
+}

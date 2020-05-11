@@ -1,0 +1,227 @@
+.services {
+  padding: 60px 10px;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  h2 {
+    color: #333;
+    font-weight: 400;
+    margin-top: 20px;
+    margin-bottom: 50px;
+    text-align: center;
+  }
+
+  &__card {
+    max-width: 1400px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto;
+    grid-column-gap: 16px;
+    grid-row-gap: 16px;
+
+    @include respond-to(md) {
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .card {
+      padding: 40px;
+      margin-bottom: 20px;
+      background: rgba(250, 250, 248, 0.62);
+      border-radius: 5px;
+      border: 0px solid #000;
+      box-shadow: 1px 1px 12px 0 rgba(0, 0, 0, 0.08);
+
+      @include respond-to(md) {
+        flex: 0 0 33%;
+      }
+
+      .icon {
+        img {
+          height: 25px;
+          width: 25px;
+        }
+      }
+
+      h3 {
+        font-family: 'Lato';
+        color: #333;
+        text-transform: uppercase;
+        font-weight: 300;
+        font-size: 18px;
+        letter-spacing: 5px;
+      }
+
+      p {
+        font-family: 'Playfair Display';
+        color: #8a8a8a;
+        font-size: 16px;
+      }
+    }
+  }
+
+  .paragraph_wrapper {
+    margin-top: 100px;
+    width: 70%;
+
+    p {
+      max-width: 1400px;
+      font-family: 'Playfair Display';
+      font-weight: 400;
+      color: #333;
+
+      @include respond-to(md) {
+        font-size: 22px;
+      }
+    }
+  }
+
+  .price_wrapper {
+    margin-top: 100px;
+    width: 95%;
+    height: auto;
+    max-width: 1000px;
+
+    @include respond-to(md) {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: auto auto;
+      grid-column-gap: 16px;
+      grid-row-gap: 16px;
+    }
+
+    .black-price {
+      padding: 30px;
+      margin-bottom: 25px;
+      min-height: 500px;
+      background: #000;
+
+      @include respond-to(md) {
+        margin-bottom: 0;
+      }
+
+      .black-offer {
+        margin: 20px 0 10px 0;
+        font-family: 'Playfair Display';
+        font-size: 35px;
+        font-weight: 400;
+        opacity: 0.8;
+      }
+
+      .separator {
+        margin: 20px 0;
+        width: 120px;
+        height: 1px;
+        background-color: #e8e8e8;
+        opacity: 1;
+      }
+
+      .white-days {
+        margin: 5px 0 10px 0;
+        font-family: 'Lato';
+        font-weight: 400;
+        text-transform: uppercase;
+        font-size: 14px;
+        letter-spacing: 5px;
+        opacity: 0.8;
+      }
+
+      .price-list {
+        margin-top: 30px;
+        width: 100%;
+        opacity: 0.8;
+
+        li {
+          margin-bottom: 40px;
+
+          div {
+            margin-right: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            .service {
+              margin-right: 50px;
+
+              p {
+                font-size: 14px;
+              }
+            }
+
+            .price {
+              p {
+                font-size: 14px;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .white-price {
+      padding: 30px;
+      min-height: 500px;
+      border: 1px #e9e9e9 solid;
+
+      .white-offer {
+        margin: 20px 0;
+        color: #333;
+        font-family: 'Playfair Display';
+        font-weight: 400;
+        font-size: 35px;
+      }
+
+      .separator {
+        margin: 20px 0;
+        width: 120px;
+        height: 1px;
+        background: #e9e9e9;
+        border: none;
+      }
+
+      .white-days {
+        margin: 5px 0 10px 0;
+        color: #333;
+        text-transform: uppercase;
+        font-family: 'Lato';
+        font-weight: 400;
+        font-size: 14px;
+        letter-spacing: 5px;
+      }
+
+      .price-list {
+        margin-top: 30px;
+        width: 100%;
+
+        li {
+          margin-bottom: 40px;
+
+          div {
+            margin-right: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            .service {
+              margin-right: 50px;
+
+              p {
+                font-size: 14px;
+                color: #333;
+              }
+            }
+
+            .price {
+              p {
+                font-size: 14px;
+                color: #333;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

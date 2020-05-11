@@ -1,0 +1,100 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the header of the site/application.
+// -----------------------------------------------------------------------------
+
+.solid {
+  background-color: #000;
+  transition: background-color 1s ease 0s;
+}
+
+.page-header {
+  position: fixed;
+  padding: 0 10px;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 64px;
+  z-index: 100;
+
+  @include respond-to(sm) {
+    padding: 0 15px;
+  }
+
+  @include respond-to(lg) {
+    padding: 0 35px;
+  }
+
+  &__wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__logo {
+    margin-top: 13px;
+    padding-left: 10px;
+    img {
+      width: 115px;
+    }
+  }
+
+  &__nav {
+    display: none;
+    position: absolute;
+    top: 60px;
+    left: 0px;
+    width: 100%;
+    height: 243px;
+    background: #000;
+    z-index: 5;
+
+    @include respond-to(xl) {
+      display: none;
+    }
+
+    ul {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      list-style: none;
+
+      li {
+        font-size: 16px;
+        padding: 15px 30px;
+        font-weight: 500;
+
+        a {
+          color: #fff;
+          font-size: 18px;
+        }
+      }
+
+      .active {
+        color: #000;
+      }
+    }
+  }
+
+  &__large {
+    display: none;
+
+    @include respond-to(lg) {
+      display: flex;
+
+      ul {
+        display: flex;
+
+        li {
+          padding: 20px;
+
+          a {
+            color: #fff;
+            opacity: 1;
+            font-size: 18px;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,53 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the footer of the site/application.
+// -----------------------------------------------------------------------------
+
+.page-footer {
+  padding: 50px 30px 100px 30px;
+  background: #000;
+
+  @include respond-to(md) {
+    padding: 50px 100px 100px 100px;
+    min-height: 500px;
+  }
+
+  @include respond-to(lg) {
+    display: flex;
+    justify-content: space-between;
+    // align-items: center;
+  }
+
+  &__info {
+    margin-bottom: 45px;
+    h3 {
+      font-weight: 400;
+      opacity: 0.8;
+      margin-bottom: 25px;
+    }
+
+    ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    li {
+      margin-bottom: 20px;
+      transition: transform 200ms cubic-bezier(0.55, 0.085, 0.68, 0.53),
+        -webkit-transform 200ms cubic-bezier(0.55, 0.085, 0.68, 0.53);
+
+      &:hover {
+        transform: translate(2px, 0px);
+      }
+    }
+
+    a {
+      font-size: 16px;
+      color: #fff;
+      opacity: 0.6;
+
+      &:hover {
+        opacity: 1;
+      }
+    }
+  }
+}

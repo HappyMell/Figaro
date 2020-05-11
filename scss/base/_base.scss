@@ -1,0 +1,164 @@
+// -----------------------------------------------------------------------------
+// This file contains very basic styles.
+// -----------------------------------------------------------------------------
+
+/**
+ * Set up a decent box model on the root element
+ */
+html {
+  box-sizing: border-box;
+  -webkit-overflow-scrolling: touch;
+}
+
+body {
+  max-width: 100%;
+  overflow-x: hidden;
+  background: #000;
+}
+
+h1 {
+  font-weight: 700;
+  font-size: 38px;
+  color: #fff;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+h2 {
+  font-weight: 700;
+  font-size: 32px;
+  color: #fff;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+h3 {
+  font-weight: 700;
+  font-size: 24px;
+  color: #fff;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+h4 {
+  font-weight: 700;
+  font-size: 18px;
+  color: #fff;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+h5 {
+  font-weight: 700;
+  font-size: 14px;
+  color: #fff;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+h6 {
+  font-weight: 700;
+  font-size: 12px;
+  color: #fff;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+p {
+  font-size: 20px;
+  line-height: 33px;
+  margin-bottom: 10px;
+  color: #fff;
+}
+
+.block-quote {
+  padding: 10px 20px;
+  margin-bottom: 10px;
+  font-size: 18px;
+  color: #fff;
+  border-left: 5px solid #fff;
+}
+
+.bold {
+  font-weight: 700;
+}
+
+.italic {
+  font-style: italic;
+}
+
+.underline {
+  text-decoration: underline;
+}
+
+a {
+  opacity: 0.7;
+  &:hover {
+    opacity: 1;
+  }
+}
+
+li {
+  list-style: none;
+  transition: transform 200ms cubic-bezier(0.55, 0.085, 0.68, 0.53),
+    -webkit-transform 200ms cubic-bezier(0.55, 0.085, 0.68, 0.53);
+
+  &:hover {
+    transform: translate(2px, 0px);
+  }
+}
+
+ul {
+  //  padding-left: 40px;
+  margin-bottom: 10px;
+  color: #fff;
+}
+
+ol {
+  padding-left: 40px;
+  margin-bottom: 10px;
+  color: #fff;
+  font-size: 20px;
+}
+
+/**
+ * Make all elements from the DOM inherit from the parent box-sizing
+ * Since `*` has a specificity of 0, it does not override the `html` value
+ * making all elements inheriting from the root box-sizing value
+ * See: https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/
+ */
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  display: block;
+  height: auto;
+  /* Make sure images are scaled correctly. */
+  max-width: 100%;
+  /* Adhere to container width. */
+}
+
+/**
+ * Basic styles for links
+ */
+a {
+  text-decoration: none;
+  font-family: $main-font;
+  font-size: 22px;
+  color: rgba(216, 75, 75, 0.8);
+  @include transition;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+svg {
+  width: 155px;
+}

@@ -1,0 +1,162 @@
+.book {
+  padding: 25px 0;
+  background: #fff;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &__wrapper {
+    width: 90%;
+    max-width: 1400px;
+
+    h2 {
+      margin-top: 10;
+      color: #333;
+      font-weight: 400;
+      font-size: 35px;
+
+      @include respond-to(md) {
+        font-size: 45px;
+      }
+    }
+
+    p {
+      font-size: 16px;
+      height: 30px;
+      color: #333;
+      font-weight: 400;
+
+      @include respond-to(md) {
+        font-size: 18px;
+      }
+    }
+
+    &--block {
+      margin-top: 100px;
+      width: 100%;
+
+      @include respond-to(lg) {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      form {
+        margin-bottom: 15px;
+        width: 100%;
+
+        @include respond-to(lg) {
+          flex: 0 0 48%;
+        }
+
+        input {
+          padding: 8px 12px;
+          font-family: 'Playfair Display';
+          color: #333;
+          font-size: 16px;
+          width: 100%;
+          margin-bottom: 10px;
+          height: 70px;
+          border: none;
+          border-bottom: 1px solid #000;
+        }
+
+        textarea {
+          padding: 8px 12px;
+          margin-bottom: 10px;
+          width: 100%;
+          height: 70px;
+          color: #333;
+          font-size: 16px;
+          font-family: 'Playfair Display';
+          border: none;
+          border-bottom: 1px solid #000;
+        }
+
+        li {
+          margin-top: 30px;
+          a {
+            color: #000;
+          }
+        }
+      }
+
+      .block {
+        margin-top: 30px;
+
+        @include respond-to(lg) {
+          padding: 40px;
+        }
+
+        ul {
+          margin-top: 30px;
+          width: 100%;
+
+          li {
+            margin-bottom: 40px;
+            width: 100%;
+
+            div {
+              margin-right: 50px;
+
+              .service {
+                margin-right: 50px;
+                display: flex;
+
+                img {
+                  margin-right: 15px;
+                  width: 30px;
+                  height: 30px;
+                }
+
+                p {
+                  font-size: 14px;
+
+                  @include respond-to(md) {
+                    font-size: 18px;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    &--review {
+      margin-top: 100px;
+      width: 90%;
+      max-width: 1400px;
+
+      @include respond-to(md) {
+        display: flex;
+        width: 100%;
+      }
+
+      .review {
+        padding: 40px;
+        min-height: 350px;
+
+        .photo {
+          width: 110px;
+          height: 110px;
+          max-width: 100%;
+        }
+
+        .stars {
+          width: 75px;
+          height: 14px;
+          margin-top: 35px;
+        }
+
+        .signature {
+          font-family: 'Great Vibes';
+          font-size: 16px;
+          color: #333;
+          margin-top: 10px;
+        }
+      }
+    }
+  }
+}
